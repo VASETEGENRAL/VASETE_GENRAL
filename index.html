@@ -1,120 +1,47 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-<meta charset="UTF-8">
-<title>ژنرال شاپ</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-body{
-  margin:0;
-  font-family:'Vazirmatn',sans-serif;
-  direction:rtl;
-  text-align:center;
-  color:white;
-  min-height:100vh;
-  padding:40px 10px;
-
-  background:
-  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-  url("https://i.ibb.co/j9ZmmZg1/background-png.png");
-  background-size:cover;
-  background-position:center;
-}
-
-/* عنوان */
-h1{
-  color:#38bdf8;
-  text-shadow:0 0 15px #38bdf8;
-}
-
-/* دکمه‌ها */
-.btn{
-  display:block;
-  width:300px;
-  margin:12px auto;
-  padding:15px;
-  border-radius:15px;
-  text-decoration:none;
-  color:white;
-  font-size:16px;
-
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.2);
-
-  backdrop-filter:blur(8px);
-
-  /* انیمیشن */
-  transition:0.3s;
-  position:relative;
-  overflow:hidden;
-
-  /* نورانی */
-  box-shadow:0 0 10px rgba(56,189,248,0.3);
-}
-
-/* نور متحرک */
-.btn::before{
-  content:"";
-  position:absolute;
-  top:-50%;
-  left:-50%;
-  width:200%;
-  height:200%;
-  background:linear-gradient(
-    45deg,
-    transparent,
-    rgba(56,189,248,0.4),
-    transparent
-  );
-  transform:rotate(0deg);
-  animation:shine 3s infinite linear;
-}
-
-@keyframes shine{
-  0%{transform:rotate(0deg);}
-  100%{transform:rotate(360deg);}
-}
-
-/* هاور */
-.btn:hover{
-  transform:scale(1.08);
-  box-shadow:0 0 25px #38bdf8;
-  background:#38bdf8;
-  color:black;
-}
-
-/* کلیک */
-.btn:active{
-  transform:scale(0.95);
-}
-</style>
-</head>
-
 <body>
+
+<div class="box">
 
 <h1>👑 ژنرال شاپ</h1>
 
-<a class="btn" href="https://rubika.ir/BaZaR_RoBiN_SHOP">🛒 بازار معاملاتی</a>
-<a class="btn" href="https://rubika.ir/TRUST_GENRAL">🔐 چنل اعتماد</a>
-<a class="btn" href="https://rubika.ir/GENRAL_BOT">🤖 ربات رسمی</a>
-<a class="btn" href="https://rubika.ir/VASETE_GENRAL">📩 ارتباط</a>
+<div class="subtitle">
+لینک‌های رسمی روبیکا
+</div>
 
-<!-- 🔊 صدای کلیک -->
+<a class="btn" href="https://rubika.ir/BaZaR_RoBiN_SHOP">
+🛒 بازار معاملاتی رابین شاپ
+</a>
+
+<a class="btn" href="https://rubika.ir/TRUST_GENRAL">
+🔐 چنل اعتماد ژنرال
+</a>
+
+<a class="btn" href="https://rubika.ir/GENRAL_BOT">
+🤖 ربات رسمی ژنرال
+</a>
+
+<a class="btn" href="https://rubika.ir/VASETE_GENRAL">
+📩 ارتباط با ژنرال
+</a>
+
+<a class="btn" href="tel:+989223585132">
+📞 09223585132
+</a>
+
+</div>
+
 <audio id="clickSound" src="https://www.myinstants.com/media/sounds/click.mp3"></audio>
 
 <script>
-const buttons = document.querySelectorAll(".btn");
-const sound = document.getElementById("clickSound");
+const buttons=document.querySelectorAll(".btn");
+const sound=document.getElementById("clickSound");
 
 buttons.forEach(btn=>{
-  btn.addEventListener("click", ()=>{
-    sound.currentTime = 0;
-    sound.play();
-  });
+btn.addEventListener("click",()=>{
+sound.currentTime=0;
+sound.play();
+});
 });
 </script>
 
 </body>
-  </html>
